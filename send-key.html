@@ -69,5 +69,17 @@
       copiarTexto(yourKey.textContent)
     })
   </script>
+
+<script>
+  const ref = document.referrer;
+  const allowedRef1 = "https://link-center.net/1338065/s333-macro-for-asur";
+  const allowedRef2 = "https://link-center.net/1338065/s333-macro-for-asura";
+
+  if (!ref || (!ref.startsWith(allowedRef1) && !ref.startsWith(allowedRef2))) {
+    window.location.href = "/";
+  }
+</script>
+
+
 </body>
 </html>
