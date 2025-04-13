@@ -4,19 +4,194 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>S333 HUBS | Acesso Premium</title>
-  <link rel="stylesheet" href="/style.css" type="text/css" media="all" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #6366f1;
+      --color-secondary: #4f46e5;
+      --bg-dark: #0f172a;
+      --bg-light: #1e293b;
+      --text-color: #f8fafc;
+      --card-bg: rgba(255, 255, 255, 0.05);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, var(--bg-dark), var(--bg-light));
+      color: var(--text-color);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+
+    .logo {
+      width: 120px;
+      margin-bottom: 20px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    p.subtitle {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto 30px auto;
+      animation: fadeInUp 1.2s ease forwards;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      padding: 30px 0;
+      animation: fadeInUp 1.5s ease forwards;
+    }
+
+    .btn {
+      padding: 14px 30px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s ease;
+      box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 32px rgba(99, 102, 241, 0.5);
+    }
+
+    section {
+      width: 100%;
+      max-width: 900px;
+      padding: 40px 20px;
+    }
+
+    .faq {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+      animation: fadeInUp 1.8s ease forwards;
+    }
+
+    .faq h2 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+    }
+
+    .faq-item strong {
+      color: var(--color-primary);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      text-align: center;
+      opacity: 0.6;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .btn-group {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+  </style>
 </head>
 <body>
+
   <header>
-  <img src="/Main logo.png" alt="S333 HUBS Logo" class="logo"/>
-    <h1>Bem-vindo ao S333 HUBS</h1>
-    <h1>Acesso Exclusivo Liberado</h1>
-    <p>Você está a um clique de desbloquear recursos premium. Aproveite o melhor da plataforma com conteúdo exclusivo para membros.</p>
-    <a href="https://link-center.net/1338065/s333-macro-for-asura" class="btn">Acessar Conteúdo 🔓</a>
+    <img src="https://github.com/loudcoringadas/Site-2/blob/main/Main%20logo.png?raw=true" alt="S333 HUBS Logo" class="logo" />
+    <h1>S333 HUBS</h1>
+    <p class="subtitle">Desbloqueie o acesso premium e aproveite o melhor da nossa plataforma com recursos exclusivos.</p>
+    <div class="btn-group">
+      <a href="#faq" class="btn">❓ Dúvidas</a>
+      <a href="https://link-center.net/1338065/s333-macro-for-asura" class="btn">🔓 Obter Key</a>
+      <a href="https://discord.gg/R2YHzkFgSV" class="btn" target="_blank">💬 Entrar no Discord</a>
+      <a href="mailto:suporte@s333hubs.com" class="btn">📧 Suporte</a>
+    </div>
   </header>
+
+  <section class="faq" id="faq">
+    <h2>Dúvidas Frequentes</h2>
+    <div class="faq-item">
+      <strong>Como acesso o conteúdo premium?</strong>
+      Clique no botão “Obter Key”, siga os passos e insira a key no painel do macro.
+    </div>
+    <div class="faq-item">
+      <strong>Minha key não está funcionando. E agora?</strong>
+      Entre em contato com nosso suporte via Discord ou e-mail.
+    </div>
+    <div class="faq-item">
+      <strong>O acesso é vitalício?</strong>
+      Não. As chaves possuem tempo limitado. Consulte os termos ao ativar.
+    </div>
+  </section>
+
   <footer>
     © 2025 S333 HUBS. Todos os direitos reservados.
   </footer>
+
 </body>
 </html>
