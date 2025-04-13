@@ -169,7 +169,7 @@
       <a href="#faq" class="btn">❓ Dúvidas</a>
       <a href="https://link-center.net/1338065/s333-macro-for-asura" class="btn">🔓 Obter Key</a>
       <a href="https://discord.gg/R2YHzkFgSV" class="btn" target="_blank">💬 Entrar no Discord</a>
-      <a href="mailto:suporte@s333hubs.com" class="btn">📧 Suporte</a>
+      <a href="mailto:suporte@s333hubs.com" class="btn" id="supportBtn">📧 Suporte</a>
     </div>
   </header>
 
@@ -189,9 +189,40 @@
     </div>
   </section>
 
+  <!-- Modal de Suporte -->
+  <div id="supportModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(6px); display: flex; align-items: center; justify-content: center; z-index: 9999;">
+    <div style="background: var(--card-bg); border-radius: 16px; padding: 30px; max-width: 500px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.4); animation: fadeInUp 0.6s ease-out;">
+      <h2 style="font-size: 1.8rem; margin-bottom: 15px;">💬 Suporte ao Cliente</h2>
+      <p style="margin-bottom: 20px; font-size: 1rem;">
+        Se estiver com problemas, siga estas dicas:<br><br>
+        ✅ Verifique se copiou a key corretamente<br>
+        ✅ Confirme se seguiu todos os passos do Linkvertise<br>
+        ✅ Reinicie o macro após ativar<br><br>
+        Para suporte direto, entre no nosso <strong>servidor do Discord</strong> e abra um ticket:
+      </p>
+      <a href="https://discord.gg/R2YHzkFgSV" target="_blank" style="display: inline-block; margin-bottom: 20px; padding: 12px 24px; background: var(--color-primary); color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">🎫 Abrir Ticket no Discord</a>
+      <br>
+      <button onclick="closeModal()" style="margin-top: 10px; padding: 10px 20px; background: none; border: 1px solid var(--color-primary); color: var(--color-primary); border-radius: 8px; cursor: pointer;">Fechar</button>
+    </div>
+  </div>
+
   <footer>
     © 2025 S333 HUBS. Todos os direitos reservados.
   </footer>
+
+  <script>
+    const supportBtn = document.getElementById('supportBtn');
+    const modal = document.getElementById('supportModal');
+
+    supportBtn.addEventListener('click', function(event) {
+      event.preventDefault();
+      modal.style.display = 'flex';
+    });
+
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+  </script>
 
 </body>
 </html>
